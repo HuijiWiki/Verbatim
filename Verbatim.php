@@ -15,7 +15,7 @@ return true;
 }
 // The callback function for converting the input text to HTML output
 function renderVerbatim( $input ) {
-return str_replace("\n",'',wfMsg(trim($input)));
+  return str_replace("\n",'',wfMessage(trim($input))->text());
 }
 
   
