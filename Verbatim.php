@@ -15,7 +15,8 @@ return true;
 }
 // The callback function for converting the input text to HTML output
 function renderVerbatim( $input ) {
-  return str_replace("\n",'',wfMessage(trim($input))->text());
+  $str = '<a href="#" class="des-help" data-toggle="tooltip" title="由Verbatim标签生成。Verbatim标签已弃用并且将在未来版本中被移除。请不要继续使用。"><i class="fa fa-question-circle"></i></a>';
+  return str_replace("\n",'',wfMessage(trim($input))->text()).$str;
 }
 
   
